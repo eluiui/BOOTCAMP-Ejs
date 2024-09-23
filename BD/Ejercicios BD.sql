@@ -240,6 +240,19 @@ SELECT directors.director_name,
 	AND movies.movie_launch_date > directors.director_dead_date;
 
 --ej 34--
+UPDATE directors 
+	SET director_dead_date = DATEADD(year, 1, (
+   		SELECT MAX(movies.movie_launch_date) 
+    		FROM movies 
+   			WHERE movies.director_id = directors.director_id 
+    		AND movies.movie_launch_date > directors.director_dead_date
+		))
+	WHERE director_dead_date IS NOT NULL 
+	AND EXISTS (
+    	SELECT 1 FROM movies 
+   		WHERE movies.director_id = directors.director_id 
+    	AND movies.movie_launch_date > directors.director_dead_date
+);
 
 
 --Berserk mode--
@@ -283,4 +296,14 @@ SELECT studios.studio_name,
 	ORDER BY studios.studio_name;
 
 --Ej 37--
-
+SELECT members.member_name, 
+       members.member_phone, 
+       movies.movie_name, 
+       MIN(members_movie_rental.member_rental_date) AS Fecha
+	FROM members
+	JOIN members_movie_rental ON members.member_id = members_movie_rental.member_id
+	JOIN movies ON members_movie_rental.member_movie_rental_id = movies.movie_id 
+	JOIN nationalities ON CAST(RIGHT(members.member_phone, 1) AS INTEGER) = nationalities.nationality_id 
+GROUP BY 
+    members.member_name, members.member_phone, movies.movie_name
+ORDER BY Fecha ASC;
