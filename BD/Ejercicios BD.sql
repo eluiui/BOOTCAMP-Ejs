@@ -217,8 +217,7 @@ SELECT COUNT(DISTINCT actors.actor_id) AS actores,
 	WHERE studios.studio_active = 0;
 
 --ej 32--
-SELECT 
-	members.member_name, 
+SELECT members.member_name, 
 	members.member_town, 
 	members.member_phone 
 	FROM members 
