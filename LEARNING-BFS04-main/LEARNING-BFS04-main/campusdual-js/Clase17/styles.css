@@ -1,0 +1,25 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: fit-content;
+
+}
+#chatlog{
+    display: flex;
+    flex-direction: column;
+}
+.bocadillo{
+    border: 1px solid black;
+    border-radius: 5px 5px 5px 0px;
+    margin: 5px;
+    display: flex;
+    justify-content: end;
+}
+.cerrar{
+    border-left: 1px solid black;
+    padding: 0px 5px;
+    margin-left: 5px;
+    font-family: monospace;
+    background-color: red;
+    color: white;
+}

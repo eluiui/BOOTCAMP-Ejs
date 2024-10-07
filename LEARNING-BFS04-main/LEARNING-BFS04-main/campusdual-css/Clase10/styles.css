@@ -1,0 +1,35 @@
+.container{
+    width: 644px;
+    padding: 0px;
+}
+.start {
+    display: flex;
+    justify-content: start;
+}
+.end {
+    display: flex;
+    justify-content: end;
+}
+.between {
+    display: flex;
+    justify-content: space-between;
+}
+.around {
+    display: flex;
+    justify-content: space-around;
+}
+.evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+.fondo{
+    position: fixed;
+    z-index: -1;
+    width: 644px;
+    display: flex;
+}
+.barra{
+    border: 1px solid darkgray;
+    width: 90px;
+    height: 773px;
+}

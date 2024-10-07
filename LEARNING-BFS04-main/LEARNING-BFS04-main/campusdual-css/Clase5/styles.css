@@ -1,0 +1,18 @@
+div{
+    border: 1px red solid;
+}
+span{
+    border: 1px blue solid;
+}
+.contenedor{
+    background-color: lightgray;
+    border: 1 green solid;
+}
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 21px black solid;
+    padding: 22px;
+    margin: 23px;
+}

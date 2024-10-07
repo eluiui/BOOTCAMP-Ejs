@@ -1,0 +1,37 @@
+Promise.all(
+    [
+        fetch('https://httpbin.org/delay/9'),
+        fetch('https://httpbin.org/delay/5'),
+        fetch('https://httpbin.org/delay/8'),
+        fetch('https://httpbin.org/delay/3'),
+        fetch('https://httpbin.org/delay/7'),
+        fetch('https://httpbin.org/delay/10')
+    ]
+)
+.then(data=>console.log(data))
+.catch(err=>console.log(err));
+
+Promise.all(
+    [
+        fetch('https://httpbin.org/delay/9'),
+        fetch('https://httpbin.org/delay/5'),
+        fetch('https://httpbin.org/delay/8'),
+        fetch('https://httpbin.org/delay/3'),
+        fetch('https://httpbin.org/delay/7'),
+        fetch('https://httpbi.org/delay/10')
+    ]
+)
+.then(data=>console.log(data))
+.catch(err=>console.log(err));
+
+Promise.allSettled(
+    [
+        fetch('https://httpbin.org/delay/9'),
+        fetch('https://httpbin.org/delay/5'),
+        fetch('https://httpbin.org/delay/8'),
+        fetch('https://httpbin.org/delay/3'),
+        fetch('https://httpbin.org/delay/7'),
+        fetch('https://httpbi.org/delay/10'),
+    ]
+)
+.then(data=>console.log(data));

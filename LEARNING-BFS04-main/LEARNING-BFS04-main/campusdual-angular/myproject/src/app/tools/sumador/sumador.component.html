@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="prompt">
+        {{totalValue}}
+    </div>
+    <div class="buttons">
+        <div *ngFor="let sumButton of sumButtons">
+            <app-custom-button
+                [customName]="sumButton.text"
+                [customStyle]="sumButton.color"
+                [customValue]="sumButton.operation"
+                (returnValueAction)="addValue($event)"
+            ></app-custom-button>
+        </div>
+    </div>
+    <div class="message">
+        <div *ngIf="totalValue%2==0; else negMessage">
+            <label>El valor es par</label>
+        </div>
+        <ng-template #negMessage>
+            <label>El valor es impar</label>
+        </ng-template>
+    </div>
+    <a [routerLink]="['./button']">enlace</a>
+    <button [routerLink]="['../button']">botón</button>
+</div>

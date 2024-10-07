@@ -1,0 +1,13 @@
+.fila {
+    display: flex;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+.columna-invertida {
+    display: flex;
+    flex-direction: column-reverse;
+}

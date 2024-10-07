@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Others example</title>
+</head>
+<body>
+    <form action="/FormsOtros.html" method="get">
+        <ul>
+            <li>
+                <label for="edad">Seleccione edad</label>​
+                <select name="edad">​
+                    <option value="S">Menor de 18</option>​
+                    <option value="M">Mediana edad</option>​
+                    <option value="L">Mayor de 65</option>​
+                </select>
+            </li>
+            <li>
+                <label for="sexo">Seleccione sexo</label>​
+                <input type="radio" name="sexo" value="mujer"> Mujer​
+                <input type="radio" name="sexo" value="hombre"> Hombre​
+                <input type="radio" name="sexo" value="otro"> Otro
+            </li>
+            <li>
+                <label for="intereses">Seleccione hasta 3 intereses</label>​
+                <input type="checkbox" name="intereses" value="deporte"> Deporte​
+                <input type="checkbox" name="intereses" value="música"> Música​
+                <input type="checkbox" name="intereses" value="tecnología"> Tecnología
+            </li>
+        </ul>
+        <button type="submit">Enviar</button>​
+        <button type="reset">Cancelar</button>
+    </form>
+</body>
+</html>

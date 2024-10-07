@@ -1,0 +1,22 @@
+.grid111{
+    border: 1px solid darkgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: fit-content;
+}
+.grid121{
+    border: 1px solid darkgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: fit-content;
+}
+.grid123{
+    border: 1px solid darkgray;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    width: fit-content;
+}
+div{
+    display:flex;
+    justify-content: space-evenly;
+}

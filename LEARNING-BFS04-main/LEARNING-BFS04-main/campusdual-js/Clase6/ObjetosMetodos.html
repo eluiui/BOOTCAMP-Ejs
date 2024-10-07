@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Objeto {
+            constructor(x){
+                this.x=x;
+            }
+            imprimirValor(){
+                console.log("El valor es:"+this.x);
+            }
+            //getters
+            get cuadrado(){
+                return this.x*this.x;
+            }
+            //funciones estaticas
+            static saludo(){
+                return "Hola";
+            }
+            //setter
+        }
+        //el acceso sin instanciar solo es funcional en los métodos estaticos
+        console.log("Acceso estático");
+        //console.log(Objeto.imprimirValor());
+        console.log(Objeto.saludo());
+        //accedemos al getter que obtiene el valor al cuadrado
+        let obj = new Objeto(2);
+        console.log("Acceso tras el instanciado");
+        obj.imprimirValor();
+        console.log("El cuadrado es:"+obj.cuadrado);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

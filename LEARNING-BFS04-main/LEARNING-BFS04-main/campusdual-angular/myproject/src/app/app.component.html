@@ -1,0 +1,34 @@
+<!-- <h1>Hola mundo! desde {{title}}</h1>
+<h2>método: {{sumaNumero(2,3)}}</h2>
+<h3>número: {{numero}}</h3>
+<h4>
+  <div *ngFor="let num of arrNumeros">
+    <div *ngIf="num%2==0; else imMessage">
+      <h5>El valor {{num}} es par</h5>
+    </div>
+    <ng-template #imMessage>
+      <div>
+        <h5>El valor {{num}} es impar</h5>
+      </div>
+    </ng-template>
+    <app-custom-button
+      [customName]="'Botón '+num.toString()"
+      [customStyle]="num%2==0?'red':'green'"
+      [customValue]="num"
+      (returnValueAction)="showValue($event)"
+      >
+    </app-custom-button>
+  </div>
+  
+</h4> -->
+<!-- <div>{{today}}</div>
+<div>{{today | date : 'dd/MM/yyyy'}}</div>
+<div>{{"Hola mundo" | upperCase }}</div>
+<div>{{ 12345678 | numberString:"." }}</div>
+<div>{{ 123456789 | numberString:"@" }}</div> -->
+
+<div class="content">
+  <app-header></app-header>
+  <div><router-outlet></router-outlet></div>
+  <app-footer></app-footer>
+</div>

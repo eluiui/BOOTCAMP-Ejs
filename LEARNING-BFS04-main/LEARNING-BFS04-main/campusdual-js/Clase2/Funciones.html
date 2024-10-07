@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function funcionA(x){
+            console.log("soy la funcion A con el valor "+x);
+            return x+1;
+        }
+        
+        //funcion anonima
+        funcionB = function(x){
+            console.log("soy la funcion B con el valor "+x);
+            return x-1;
+        }
+
+        console.log("llamando a funcionA con valor 1");
+        resultado = funcionA(1);
+        console.log("El resultado es "+resultado);
+
+        console.log("llamando a funcionB con valor 5");
+        resultado = funcionB(5);
+        console.log("El resultado es "+resultado);
+
+        console.log("Cambiamos a donde apunta la funcionA y apuntamos a la funcionalidad de la B");
+        funcionA=funcionB;
+        resultado = funcionA(10);
+        console.log("El resultado es "+resultado);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+

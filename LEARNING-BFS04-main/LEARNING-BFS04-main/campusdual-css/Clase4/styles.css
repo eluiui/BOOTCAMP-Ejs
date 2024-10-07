@@ -1,0 +1,17 @@
+#idcss{
+    border: 5px lime double;
+}
+div.classcss{
+    border: 5px pink solid;
+}
+.classcss{
+    border: 5px indigo dashed;
+}
+header div{
+    border: 5px olive double;
+}
+div{
+    border: 5px red solid!important;
+    width: 200px;
+    height: 50px;
+}

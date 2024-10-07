@@ -1,0 +1,107 @@
+@import '@angular/material/theming';
+@include mat-core();
+
+$my-green-palette: (
+    50 : #e7efe4,
+    100 : #c3d6bb,
+    200 : #9cbb8e,
+    300 : #749f61,
+    400 : #568b3f,
+    500 : #38761d,
+    600 : #326e1a,
+    700 : #2b6315,
+    800 : #245911,
+    900 : #17460a,
+    A100 : #94ff7d,
+    A200 : #6aff4a,
+    A400 : #40ff17,
+    A700 : #2dfc00,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-basic-green-palette: (
+    50 : #fafcfa,
+    100 : #f4f9f2,
+    200 : #ecf5e9,
+    300 : #e4f0e0,
+    400 : #dfedda,
+    500 : #d9ead3,
+    600 : #d5e7ce,
+    700 : #cfe4c8,
+    800 : #cae1c2,
+    900 : #c0dbb7,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-accent-green-palette: (
+    50 : #ecefe4,
+    100 : #ced6bb,
+    200 : #aebb8e,
+    300 : #8e9f61,
+    400 : #758b3f,
+    500 : #5d761d,
+    600 : #556e1a,
+    700 : #4b6315,
+    800 : #415911,
+    900 : #30460a,
+    A100 : #c9ff7d,
+    A200 : #b4ff4a,
+    A400 : #9fff17,
+    A700 : #94fc00,
+    contrast: (50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$my-app-basic: mat-palette($my-basic-green-palette);
+$my-app-primary: mat-palette($my-green-palette);
+$my-app-accent: mat-palette($my-accent-green-palette, 500, 900, A100);
+$my-app-warn: mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);

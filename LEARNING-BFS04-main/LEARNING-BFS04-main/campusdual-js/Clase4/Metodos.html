@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        metodo = {
+            metodo1(){
+                console.log("Soy el Método 1");
+            },
+            ["metodo"+2](){
+                console.log("Soy el Método 2");
+            },
+            metodoZ(){
+                console.log("Soy el Método Z:"+this.x);
+            }
+        }
+
+        metodo.metodo1();
+        metodo.metodo2();
+        let a = {};
+        a.x=13;
+        a.y=metodo.metodoZ;
+        a.y();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

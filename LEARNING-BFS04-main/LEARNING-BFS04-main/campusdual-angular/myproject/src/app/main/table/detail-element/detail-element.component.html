@@ -1,0 +1,34 @@
+<form>
+    <div class="formdata">
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput type="text" [(ngModel)]="element.name" name="name" #name="ngModel"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Position</mat-label>
+                <input matInput type="text" [(ngModel)]="element.position" name="position" #stock="ngModel"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Weight</mat-label>
+                <input matInput type="text" [(ngModel)]="element.weight" name="weight" #price="ngModel"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Symbol</mat-label>
+                <input matInput type="text" [(ngModel)]="element.symbol" name="symbol" #price="ngModel"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)='update()'>
+                Guardar
+                <mat-icon>save_as</mat-icon>
+            </button>
+        </div>
+</div>
+</form>

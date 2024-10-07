@@ -1,0 +1,1 @@
+console.log("hola desde fichero js en la cabecera");

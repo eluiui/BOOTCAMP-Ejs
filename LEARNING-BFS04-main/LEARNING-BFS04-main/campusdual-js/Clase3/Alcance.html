@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const variableConst = "const";
+        var variableGlobalVar = "var";
+        let variableGlobalLet = "let";
+        variableGlobalVacio = "vacio";
+        //la declaración de un var con mismo nombre da acceso al espacio de memoria
+        function funcionVar(){
+            var variableVar = "var";
+            if(true){
+                var variableVar = "var2";
+                console.log(variableVar);
+            }
+            console.log(variableVar);
+        }
+        //la declaracion de un let genera un espacio de memoria nuevo dentro del ámbito actual pero no sobrescribe el de fuera
+        function funcionLet(){
+            let variableLet = "let";
+            if(true){
+                let variableLet = "let2";
+                console.log(variableLet);
+            }
+            console.log(variableLet);
+        }
+
+        funcionVar();
+        funcionLet();
+        variableConst = "const2";
+    </script>
+</head>
+<body>
+    <script>
+        //Var crea una prorpiedad dentro del this global
+        console.log(this.variableGlobalVar);
+        //Let no crea una prorpiedad dentro del this global
+        console.log(this.variableGlobalLet);
+        //Sin embargo ambas son accesibles
+        console.log(variableGlobalVar);
+        console.log(variableGlobalLet);
+    </script>
+</body>
+</html>

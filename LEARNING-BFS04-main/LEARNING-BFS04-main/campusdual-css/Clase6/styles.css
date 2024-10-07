@@ -1,0 +1,18 @@
+h1 , p {
+    text-decoration: underline;
+}
+div li a {
+    border: 1px solid red;
+}
+div>p {
+    border: 1px solid indigo;
+}
+li + li {
+    border: 1px solid lime;
+}
+a:hover{
+    background-color: yellow;
+}
+li:first-child{
+    border: 1px solid blue;
+}

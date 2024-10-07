@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space">
+        <button class="menuhome" mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger"
+            (mouseover)="menuTrigger.openMenu()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" [overlapTrigger]="false">
+            <span (mouseleave)="menuTrigger.closeMenu()">
+                <button mat-menu-item [routerLink]="['/main']">
+                    <mat-icon>home</mat-icon>
+                    <span>Inicio</span>
+                </button>
+                <button mat-menu-item [routerLink]="['/main/menu']">
+                    <mat-icon>import_contacts</mat-icon>
+                    <span>Menú</span>
+                </button>
+                <button mat-menu-item [routerLink]="['/main/menutrigger']">
+                    <mat-icon>help</mat-icon>
+                    <span>Menú Desplegable</span>
+                </button>
+                <button mat-menu-item [routerLink]="['/main/table']">
+                    <mat-icon>table</mat-icon>
+                    <span>Tabla</span>
+                </button>
+            </span>
+        </mat-menu>
+    </span>
+    <span class="fill-remaining-space">Header</span>
+</mat-toolbar>

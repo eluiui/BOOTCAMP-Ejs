@@ -1,0 +1,32 @@
+<button (click)="return()">
+    <mat-icon>keyboard_return</mat-icon>
+    Volver
+</button>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="name">
+            Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="position">
+            Position
+        </label>
+        <input id="position" type="text" formControlName="position">
+    </div>
+    <div>
+        <label for="weight">
+            Weight
+        </label>
+        <input id="weight" type="text" formControlName="weight">
+    </div>
+    <div>
+        <label for="symbol">
+            Symbol
+        </label>
+        <input id="symbol" type="text" formControlName="symbol">
+    </div>
+    <button class="button" type="submit">Add</button>
+    <button class="button" type="reset">Clear</button>
+</form>
